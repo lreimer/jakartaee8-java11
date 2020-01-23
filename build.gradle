@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'war'
     id 'fish.payara.micro-gradle-plugin' version '1.0.3'
+    id 'com.google.cloud.tools.jib' version '1.8.0'
 }
 
 repositories {
@@ -17,4 +18,16 @@ payaraMicro {
     deployWar = true
     useUberJar = false
     daemon = false
+}
+
+jib {
+    from {
+        image = 'qaware/zulu-centos-payara-micro:11.0.5-5.194'
+    }
+    to {
+        image = 'lreimer/jakartaee8-java11'
+    }
+    container {
+        appRoot = '/opt/payara/deployments'
+    }
 }
