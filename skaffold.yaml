@@ -17,3 +17,7 @@ portForward:
     namespace: default
     port: 8080
     localPort: 8080
+profiles:
+  - name: development
+    activation:
+      - kubeContext: docker-desktop
