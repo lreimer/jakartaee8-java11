@@ -1,2 +1,12 @@
-# jakartaee8-java11
-Demo micro service using Jakarta EE 8 with Java 11 running on Payara 5.194
+# Jakarta EE 8 with Java 11 on Payara 5.194
+
+Demo micro service using Jakarta EE 8 with Java 11 on Payara 5.194.
+
+## Maintainer
+
+M.-Leander Reimer (@lreimer), <mario-leander.reimer@qaware.de>
+
+## License
+
+This software is provided under the MIT open source license, read the `LICENSE`
+file for details.
