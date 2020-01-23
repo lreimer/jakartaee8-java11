@@ -9,6 +9,16 @@ $ ./gradlew clean ass
 $ skaffold dev --port-forward
 ```
 
+## Deploying
+
+Thanks for this excellent blog post https://medium.com/@bradford_hamilton/deploying-containers-on-amazons-ecs-using-fargate-and-terraform-part-2-2e6f6a3a957f
+
+```bash
+$ terraform init fargate/
+$ terraform plan fargate/
+$ terraform apply fargate/
+```
+
 ## Maintainer
 
 M.-Leander Reimer (@lreimer), <mario-leander.reimer@qaware.de>
