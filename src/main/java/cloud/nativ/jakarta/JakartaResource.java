@@ -15,8 +15,9 @@ import java.util.Map;
 public class JakartaResource {
 
     @GET
+    @Path("8")
     public Response index() {
-        Map<String, String> message = Collections.singletonMap("message", "Jakarta EE 8 with Java 11 on Payara 5.194.");
+        Map<String, String> message = Collections.singletonMap("message", "Jakarta EE 8 with Java 11 on Payara 5.194");
         return Response.ok(message).build();
     }
 }

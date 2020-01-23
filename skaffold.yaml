@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2alpha1
+kind: Config
+metadata:
+  name: jakartaee8-java11
+build:
+  artifacts:
+  - image: jakartaee8-java11
+deploy:
+  kubectl:
+    manifests:
+    - kubernetes/mciroservice.yaml
