@@ -21,6 +21,9 @@ payaraMicro {
 }
 
 jib {
+    // containerizingMode = 'packaged'
+    allowInsecureRegistries = true
+
     from {
         image = 'qaware/zulu-centos-payara-micro:11.0.5-5.194'
     }
@@ -30,4 +33,5 @@ jib {
     container {
         appRoot = '/opt/payara/deployments'
     }
+
 }
