@@ -3,9 +3,17 @@ kind: Config
 metadata:
   name: jakartaee8-java11
 build:
+  tagPolicy:
+    sha256: {}
   artifacts:
   - image: jakartaee8-java11
 deploy:
   kubectl:
     manifests:
     - kubernetes/mciroservice.yaml
+portForward:
+  - resourceType: service
+    resourceName: jakartaee8-java11
+    namespace: default
+    port: 8080
+    localPort: 8080

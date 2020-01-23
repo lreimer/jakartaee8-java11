@@ -6,7 +6,6 @@ spec:
   ports:
     - port: 8080
       name: http
-  type: LoadBalancer
   selector:
     app: jakartaee8-java11
 ---
