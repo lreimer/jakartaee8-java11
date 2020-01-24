@@ -1,6 +1,6 @@
 [
   {
-    "name": "jakartaee8-java11",
+    "name": "jee-app",
     "image": "${app_image}",
     "cpu": ${fargate_cpu},
     "memory": ${fargate_memory},
