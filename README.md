@@ -16,9 +16,10 @@ $ skaffold dev --port-forward
 Thanks for this excellent blog post https://medium.com/@bradford_hamilton/deploying-containers-on-amazons-ecs-using-fargate-and-terraform-part-2-2e6f6a3a957f
 
 ```
-$ terraform init fargate/
-$ terraform plan fargate/
-$ terraform apply fargate/
+$ cd fargate
+$ terraform init
+$ terraform plan
+$ terraform apply
 ```
 
 ## Maintainer
