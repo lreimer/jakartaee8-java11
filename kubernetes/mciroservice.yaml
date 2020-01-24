@@ -27,6 +27,6 @@ spec:
     spec:
       containers:
         - name: jakartaee8-java11
-          image: jakartaee8-java11
+          image: lreimer/jakartaee8-java11
           ports:
             - containerPort: 8080

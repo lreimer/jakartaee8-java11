@@ -1,3 +1,7 @@
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+
 plugins {
     id 'java'
     id 'war'
@@ -20,18 +24,20 @@ payaraMicro {
     daemon = false
 }
 
+
+
 jib {
-    // containerizingMode = 'packaged'
     allowInsecureRegistries = true
 
     from {
         image = 'qaware/zulu-centos-payara-micro:11.0.5-5.194'
     }
-    to {
-        image = 'lreimer/jakartaee8-java11'
-    }
     container {
-        appRoot = '/opt/payara/deployments'
+        appRoot = '/opt/payara/deployments/ROOT.war'
+        entrypoint = 'INHERIT'
+        args = ['--deploy', '/opt/payara/deployments/ROOT.war']
+        user = 'payara'
+        creationTime = "${DateTimeFormatter.ISO_DATE_TIME.format(LocalDateTime.now())}+01:00[Europe/Berlin]"
+        filesModificationTime = "${DateTimeFormatter.ISO_DATE_TIME.format(LocalDateTime.now())}+01:00[Europe/Berlin]"
     }
-
 }

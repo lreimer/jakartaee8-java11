@@ -6,7 +6,8 @@ build:
   tagPolicy:
     sha256: {}
   artifacts:
-  - image: jakartaee8-java11
+  - image: lreimer/jakartaee8-java11
+    jib: {}
 deploy:
   kubectl:
     manifests:
