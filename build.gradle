@@ -24,8 +24,6 @@ payaraMicro {
     daemon = false
 }
 
-
-
 jib {
     allowInsecureRegistries = true
 
