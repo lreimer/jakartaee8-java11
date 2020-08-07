@@ -11,7 +11,7 @@ build:
 deploy:
   kubectl:
     manifests:
-    - kubernetes/mciroservice.yaml
+    - kubernetes/microservice.yaml
 portForward:
   - resourceType: service
     resourceName: jakartaee8-java11
